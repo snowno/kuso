@@ -122,7 +122,7 @@
 {!! Form::close() !!}
 
     <script>
-
+        var mydomain = $('#domain').val();
         var uploader = Qiniu.uploader({
             runtimes: 'html5,flash,html4',      // 上传模式,依次退化
             browse_button: 'browse',         // 上传选择的点选按钮，**必需**
@@ -149,7 +149,7 @@
             // Ajax请求downToken的Url，私有空间时使用,JS-SDK 将向该地址POST文件的key和domain,服务端返回的JSON必须包含`url`字段，`url`值为该文件的下载地址
 //        unique_names: true,              // 默认 false，key 为文件名。若开启该选项，JS-SDK 会为每个文件自动生成key（文件名）
             // save_key: true,                  // 默认 false。若在服务端生成 uptoken 的上传策略中指定了 `sava_key`，则开启，SDK在前端将不对key进行任何处理
-            domain: 'http://img.tgljweb.com/',     // bucket 域名，下载资源时用到，**必需**
+            domain: mydomain,     // bucket 域名，下载资源时用到，**必需**
             container: 'container',             // 上传区域 DOM ID，默认是 browser_button 的父元素，
             max_file_size: '200mb',             // 最大文件体积限制
             flash_swf_url: 'http://cdn.staticfile.org/Plupload/2.1.1/Moxie.swf',  //引入 flash,相对路径
@@ -228,7 +228,7 @@
                     var ext = Qiniu.getFileExtension(file.name);
 
                     var key = Date.parse(new Date()) + ext;
-                    localStorage.key1 = '' + key;
+                    localStorage.key1 = mydomain + key;
                     // do something with key here
                     return key
                 },
