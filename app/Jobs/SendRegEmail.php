@@ -39,7 +39,7 @@ class SendRegEmail implements ShouldQueue
             $uid = $this->user->id;
             $mes = 'wellcome to my space!';
         }else{
-            $email = 'snownoxxxx@163.com';
+            $email = env('EMAILTEST2');
             $name = 'this is name';
             $uid = 2;
             $mes = '这是测试';

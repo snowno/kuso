@@ -8,7 +8,7 @@ class EmailController extends Controller
 {
     public function index($id)
     {
-        $email = '542145728@qq.com';
+        $email = env('EMAILTEST');
         $name = 'this is name';
         $uid = 2;
         $data = ['email'=>$email, 'name'=>$name, 'uid'=>$uid, 'activationcode'=>'2'];

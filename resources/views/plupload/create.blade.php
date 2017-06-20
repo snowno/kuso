@@ -90,7 +90,7 @@
          <span class="title_l fl">内容：</span>
     {!! Form::textarea('content') !!}
     </div>
-
+    <input type="text" id="domain"  value="{{$domain}}" >
 
     <p id="container">
        
@@ -228,7 +228,7 @@
                     var ext = Qiniu.getFileExtension(file.name);
 
                     var key = Date.parse(new Date()) + ext;
-                    localStorage.key1 = 'http://img.tgljweb.com/' + key;
+                    localStorage.key1 = '' + key;
                     // do something with key here
                     return key
                 },

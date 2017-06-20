@@ -19,7 +19,8 @@ class PluploadController extends Controller
         $auth = new Auth($au,$sc);
         $bucket = env('QINIU_BUCKET');
         $token =$auth->uploadToken($bucket);
-        return view('plupload/create',compact('token'));
+        $domain = env('UPLOADDOMAIN');
+        return view('plupload/create',compact(['token','domain']));
     }
 
     /**
