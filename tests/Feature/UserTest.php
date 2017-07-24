@@ -36,12 +36,20 @@ class UserTest extends TestCase
         return $track;
     }
 
-    public function testIndex(){
-        $this->json('GET',$this->route);
-        $this->assertResponseOk();
-        $this->assertResponseState(200);
-        $this->seeJson([
-            'code' => '1',
-        ])->seeJson;
+
+
+    public function testPop(){
+        $stack = [];
+        $this->assertEquals(0,count($stack));
+
+        array_push($stack,'foo');
+        $this->assertEquals('foo',$stack[0]);
+
+        $this->assertEquals(1,count($stack));
+
+        array_pop($stack);
+        $this->assertEquals(0,count($stack));
     }
+
+
 }

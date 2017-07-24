@@ -35,3 +35,8 @@ Route::post('/plupload/store','PluploadController@store');
 Route::post('message/store','MessageController@store');
 
 Route::resource('vue','VueController');
+
+Route::get('duck','DuckController@duck');
+
+
+Route::get('vbot','VbotController@test');

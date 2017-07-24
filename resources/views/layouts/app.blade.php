@@ -33,10 +33,12 @@
                 <!-- Header -->
                     <header id="header" class="alt">
                         <a href="/" class="logo"><strong>Snowno's</strong> <span>space</span></a>
+                        <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+
                         <nav>
                             <a href="#menu">Menu</a>
                         </nav>
-                        
+
                     </header>
 
                 <!-- Menu -->

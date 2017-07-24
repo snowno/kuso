@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('header_script')
 
-
 @stop
 @section('content')
 <!-- Banner -->
