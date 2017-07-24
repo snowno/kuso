@@ -40,3 +40,4 @@ Route::get('duck','DuckController@duck');
 
 
 Route::get('vbot','VbotController@test');
+Route::get('just','TestController@test');
