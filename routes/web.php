@@ -40,4 +40,12 @@ Route::get('duck','DuckController@duck');
 
 
 Route::get('vbot','VbotController@test');
-Route::get('just','TestController@test');
+Route::get('just','TestController@index');
+
+Route::resource('vueMood','VueMoodController');
+
+Route::get('fibonacci/{id}','TestController@fibonacci');
+Route::get('fibonacciDG/{id}','TestController@fibonacciDG');
+Route::get('sort','TestController@bubbleSort');
+
+Route::get('arg','TestController@arg');
